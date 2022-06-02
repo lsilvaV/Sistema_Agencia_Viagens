@@ -26,7 +26,7 @@ namespace viagemProjeto.Controller
                 cn.Open();
                 cmd.ExecuteNonQuery();
 
-                var resposta = MessageBox.Show("Cadastro de cliente efetuado com sucesso.", 
+                var resposta = MessageBox.Show("Cadastro de cliente efetuado com sucesso. Deseja efetuar outro cadastro?", 
                     "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
 
                 if (resposta == DialogResult.Yes)

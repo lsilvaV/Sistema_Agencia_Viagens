@@ -1,12 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
+using viagemProjeto.Model;
+using viagemProjeto.Controller;
+using viagemProjeto.View.Cadastrar;
+
 
 namespace viagemProjeto.View
 {
@@ -15,6 +14,44 @@ namespace viagemProjeto.View
         public CadastrarFun()
         {
             InitializeComponent();
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            if (tbxNome.Text == "" | tbxEmail.Text == "" | tbxSenha.Text == "")
+            {
+                MessageBox.Show("Preencha todas as informações!", "Atenção");
+            }
+            else
+            {
+                Funcionario.NomeFun = tbxNome.Text;
+                Funcionario.EmailFun = tbxNome.Text;
+                Funcionario.SenhaFun = tbxSenha.Text;
+
+                ManipulaFuncionario manipulaFuncionario = new ManipulaFuncionario();
+                manipulaFuncionario.cadastrarFun();
+            }
+
+            if (Funcionario.Retorno == "Sim")
+            {
+                
+            }
+            else if (Funcionario.Retorno == "Não")
+            {
+                this.Close();
+            }
+
+        }
+
+        public void limparTela()
+        {
+            foreach (Control ctl in this.Controls)
+            {
+                if (ctl is TextBox)
+                {
+                    ctl.Text = string.Empty;
+                }
+            }
         }
     }
 }

@@ -40,6 +40,7 @@ namespace viagemProjeto.View
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.lblBuscar = new System.Windows.Forms.Label();
+            this.ofdImg = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImg)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,6 +108,7 @@ namespace viagemProjeto.View
             this.pbxImg.Location = new System.Drawing.Point(471, 143);
             this.pbxImg.Name = "pbxImg";
             this.pbxImg.Size = new System.Drawing.Size(75, 75);
+            this.pbxImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxImg.TabIndex = 7;
             this.pbxImg.TabStop = false;
             // 
@@ -118,6 +120,7 @@ namespace viagemProjeto.View
             this.btnBuscar.TabIndex = 9;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnSalvar
             // 
@@ -137,6 +140,10 @@ namespace viagemProjeto.View
             this.lblBuscar.TabIndex = 11;
             this.lblBuscar.Text = "Imagem:";
             this.lblBuscar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // ofdImg
+            // 
+            this.ofdImg.FileName = "ofdImg";
             // 
             // CadastrarCliente
             // 
@@ -181,5 +188,6 @@ namespace viagemProjeto.View
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Label lblBuscar;
+        private System.Windows.Forms.OpenFileDialog ofdImg;
     }
 }
