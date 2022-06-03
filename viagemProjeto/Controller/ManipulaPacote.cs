@@ -1,6 +1,7 @@
 ﻿using System.Data.SqlClient;
 using System.Data;
 using viagemProjeto.Model;
+using System.Windows.Forms;
 
 namespace viagemProjeto.Controller
 {
@@ -21,6 +22,26 @@ namespace viagemProjeto.Controller
                 cmd.Parameters.AddWithValue("@dataPacVolta", Pacote.DataPacVolta);
                 cmd.Parameters.AddWithValue("@descPac", Pacote.DescPac);
                 cmd.Parameters.AddWithValue("@imgPac", Pacote.ImgPac);
+
+                SqlParameter nv = cmd.Parameters.AddWithValue("@codPac", SqlDbType.Int);
+                nv.Direction = ParameterDirection.Output;
+
+                cn.Open();
+                cmd.ExecuteNonQuery();
+
+                var resposta = MessageBox.Show("Cadastro de pacote efetuado com sucesso. Deseja efetuar outro cadastro?",
+                    "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+
+                if (resposta == DialogResult.Yes)
+                {
+                    Pacote.Retorno = "Sim";
+                    return;
+                }
+                else
+                {
+                    Pacote.Retorno = "Não";
+                    return;
+                }
             }
 
             catch

@@ -29,6 +29,7 @@ namespace viagemProjeto.View
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastrarFun));
             this.lblTitulo = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
@@ -42,8 +43,9 @@ namespace viagemProjeto.View
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
+            this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
             this.lblTitulo.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblTitulo.Location = new System.Drawing.Point(150, 59);
+            this.lblTitulo.Location = new System.Drawing.Point(155, 123);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(338, 29);
             this.lblTitulo.TabIndex = 0;
@@ -52,7 +54,8 @@ namespace viagemProjeto.View
             // lblNome
             // 
             this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(110, 142);
+            this.lblNome.BackColor = System.Drawing.Color.Transparent;
+            this.lblNome.Location = new System.Drawing.Point(115, 206);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(48, 14);
             this.lblNome.TabIndex = 1;
@@ -61,7 +64,8 @@ namespace viagemProjeto.View
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(110, 187);
+            this.lblEmail.BackColor = System.Drawing.Color.Transparent;
+            this.lblEmail.Location = new System.Drawing.Point(115, 251);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(50, 14);
             this.lblEmail.TabIndex = 2;
@@ -70,7 +74,8 @@ namespace viagemProjeto.View
             // lblSenha
             // 
             this.lblSenha.AutoSize = true;
-            this.lblSenha.Location = new System.Drawing.Point(110, 232);
+            this.lblSenha.BackColor = System.Drawing.Color.Transparent;
+            this.lblSenha.Location = new System.Drawing.Point(115, 296);
             this.lblSenha.Name = "lblSenha";
             this.lblSenha.Size = new System.Drawing.Size(52, 14);
             this.lblSenha.TabIndex = 3;
@@ -78,28 +83,28 @@ namespace viagemProjeto.View
             // 
             // tbxNome
             // 
-            this.tbxNome.Location = new System.Drawing.Point(164, 139);
+            this.tbxNome.Location = new System.Drawing.Point(169, 203);
             this.tbxNome.Name = "tbxNome";
             this.tbxNome.Size = new System.Drawing.Size(324, 22);
             this.tbxNome.TabIndex = 4;
             // 
             // tbxEmail
             // 
-            this.tbxEmail.Location = new System.Drawing.Point(164, 184);
+            this.tbxEmail.Location = new System.Drawing.Point(169, 248);
             this.tbxEmail.Name = "tbxEmail";
             this.tbxEmail.Size = new System.Drawing.Size(324, 22);
             this.tbxEmail.TabIndex = 5;
             // 
             // tbxSenha
             // 
-            this.tbxSenha.Location = new System.Drawing.Point(164, 229);
+            this.tbxSenha.Location = new System.Drawing.Point(169, 293);
             this.tbxSenha.Name = "tbxSenha";
             this.tbxSenha.Size = new System.Drawing.Size(324, 22);
             this.tbxSenha.TabIndex = 6;
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(413, 274);
+            this.btnSalvar.Location = new System.Drawing.Point(418, 338);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 23);
             this.btnSalvar.TabIndex = 7;
@@ -112,6 +117,7 @@ namespace viagemProjeto.View
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(624, 441);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.tbxSenha);

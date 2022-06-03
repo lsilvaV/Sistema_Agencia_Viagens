@@ -34,7 +34,7 @@ namespace viagemProjeto.View
 
             if (Funcionario.Retorno == "Sim")
             {
-                
+                limparTela();
             }
             else if (Funcionario.Retorno == "Não")
             {

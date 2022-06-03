@@ -29,6 +29,7 @@ namespace viagemProjeto.View.Cadastrar
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastrarPac));
             this.lblTitulo = new System.Windows.Forms.Label();
             this.lblValor = new System.Windows.Forms.Label();
             this.lblOrigem = new System.Windows.Forms.Label();
@@ -44,14 +45,16 @@ namespace viagemProjeto.View.Cadastrar
             this.pbxImg = new System.Windows.Forms.PictureBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbxOrigem = new System.Windows.Forms.ComboBox();
+            this.cbxDestino = new System.Windows.Forms.ComboBox();
+            this.ofdImg = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImg)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
+            this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
             this.lblTitulo.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblTitulo.Location = new System.Drawing.Point(66, 51);
             this.lblTitulo.Name = "lblTitulo";
@@ -62,6 +65,7 @@ namespace viagemProjeto.View.Cadastrar
             // lblValor
             // 
             this.lblValor.AutoSize = true;
+            this.lblValor.BackColor = System.Drawing.Color.Transparent;
             this.lblValor.Location = new System.Drawing.Point(65, 107);
             this.lblValor.Name = "lblValor";
             this.lblValor.Size = new System.Drawing.Size(43, 14);
@@ -71,6 +75,7 @@ namespace viagemProjeto.View.Cadastrar
             // lblOrigem
             // 
             this.lblOrigem.AutoSize = true;
+            this.lblOrigem.BackColor = System.Drawing.Color.Transparent;
             this.lblOrigem.Location = new System.Drawing.Point(51, 141);
             this.lblOrigem.Name = "lblOrigem";
             this.lblOrigem.Size = new System.Drawing.Size(57, 14);
@@ -80,6 +85,7 @@ namespace viagemProjeto.View.Cadastrar
             // lblDestino
             // 
             this.lblDestino.AutoSize = true;
+            this.lblDestino.BackColor = System.Drawing.Color.Transparent;
             this.lblDestino.Location = new System.Drawing.Point(48, 175);
             this.lblDestino.Name = "lblDestino";
             this.lblDestino.Size = new System.Drawing.Size(60, 14);
@@ -89,6 +95,7 @@ namespace viagemProjeto.View.Cadastrar
             // lblDataIda
             // 
             this.lblDataIda.AutoSize = true;
+            this.lblDataIda.BackColor = System.Drawing.Color.Transparent;
             this.lblDataIda.Location = new System.Drawing.Point(21, 209);
             this.lblDataIda.Name = "lblDataIda";
             this.lblDataIda.Size = new System.Drawing.Size(87, 14);
@@ -98,6 +105,7 @@ namespace viagemProjeto.View.Cadastrar
             // lblDataVolta
             // 
             this.lblDataVolta.AutoSize = true;
+            this.lblDataVolta.BackColor = System.Drawing.Color.Transparent;
             this.lblDataVolta.Location = new System.Drawing.Point(11, 243);
             this.lblDataVolta.Name = "lblDataVolta";
             this.lblDataVolta.Size = new System.Drawing.Size(97, 14);
@@ -107,6 +115,7 @@ namespace viagemProjeto.View.Cadastrar
             // lblDesc
             // 
             this.lblDesc.AutoSize = true;
+            this.lblDesc.BackColor = System.Drawing.Color.Transparent;
             this.lblDesc.Location = new System.Drawing.Point(36, 277);
             this.lblDesc.Name = "lblDesc";
             this.lblDesc.Size = new System.Drawing.Size(72, 14);
@@ -116,7 +125,8 @@ namespace viagemProjeto.View.Cadastrar
             // lblImg
             // 
             this.lblImg.AutoSize = true;
-            this.lblImg.Location = new System.Drawing.Point(370, 104);
+            this.lblImg.BackColor = System.Drawing.Color.Transparent;
+            this.lblImg.Location = new System.Drawing.Point(367, 104);
             this.lblImg.Name = "lblImg";
             this.lblImg.Size = new System.Drawing.Size(63, 14);
             this.lblImg.TabIndex = 7;
@@ -155,21 +165,24 @@ namespace viagemProjeto.View.Cadastrar
             // 
             // pbxImg
             // 
-            this.pbxImg.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pbxImg.Location = new System.Drawing.Point(370, 121);
+            this.pbxImg.BackColor = System.Drawing.Color.Transparent;
+            this.pbxImg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbxImg.Location = new System.Drawing.Point(367, 121);
             this.pbxImg.Name = "pbxImg";
             this.pbxImg.Size = new System.Drawing.Size(222, 141);
+            this.pbxImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxImg.TabIndex = 17;
             this.pbxImg.TabStop = false;
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(517, 268);
+            this.btnBuscar.Location = new System.Drawing.Point(514, 268);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
             this.btnBuscar.TabIndex = 18;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnSalvar
             // 
@@ -179,31 +192,437 @@ namespace viagemProjeto.View.Cadastrar
             this.btnSalvar.TabIndex = 19;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-            // comboBox1
+            // cbxOrigem
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(122, 138);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(216, 22);
-            this.comboBox1.TabIndex = 20;
+            this.cbxOrigem.FormattingEnabled = true;
+            this.cbxOrigem.Items.AddRange(new object[] {
+            "África do Sul - Pretória (executiva) / Bloemfontein (judiciária) / Cidade do Cabo" +
+                " (legislativa) ",
+            "Angola - Luanda",
+            "Argélia - Argel",
+            "Benim - Porto-Novo (constitucional) / Cotonu (sede do governo)",
+            "Botswana - Gaborone ",
+            "Burkina Faso - Ouagadougou",
+            "Burundi - Bujumbura",
+            "Cabo Verde - Praia",
+            "Camarões - Yaoundé",
+            "Chade - N\'Djamena",
+            "Comores - Moroni",
+            "Costa do Marfim - Yamoussoukro",
+            "Djibouti - Djibouti",
+            "Egito - Cairo",
+            "Eritreia - Asmara",
+            "Etiópia - Adis-Abeba",
+            "Gabão - Libreville",
+            "Gana - Acra",
+            "Guiné - Conacri",
+            "Guiné Equatorial - Malabo",
+            "Guiné-Bissau - Bissau",
+            "Gâmbia - Banjul",
+            "Lesoto - Maseru",
+            "Libéria - Monróvia",
+            "Líbia - Trípoli",
+            "Madagáscar - Antananarivo",
+            "Malawi - Lilongwe",
+            "Mali - Bamako",
+            "Marrocos - Rabat",
+            "Mauritânia - Nouakchott",
+            "Maurícia - Port Louis",
+            "Moçambique - Maputo",
+            "Namíbia - Windhoek",
+            "Nigéria - Abuja",
+            "Níger - Niamey",
+            "Quénia - Nairobi",
+            "República Centro-Africana - Bangui",
+            "República Democrática do Congo - Kinshasa",
+            "República do Congo - Brazzaville",
+            "Ruanda - Kigali",
+            "Senegal - Dakar",
+            "Serra Leoa - Freetown",
+            "Seychelles - Victoria",
+            "Somália - Mogadíscio",
+            "Suazilândia - Lobamba (real e legislativa) / Mbabane (administrativa)",
+            "Sudão - Cartum",
+            "Sudão do Sul - Juba",
+            "São Tomé e Príncipe - São Tomé",
+            "Tanzânia - Dar es Salaam (administrativa) / Dodoma (oficial)",
+            "Togo - Lomé",
+            "Tunísia - Tunis",
+            "Uganda - Kampala",
+            "Zâmbia - Lusaka",
+            "Zimbabwe - Harare",
+            "Canadá - Otawwa",
+            "Estados Unidos da América - Washington",
+            "México - Cidade do México",
+            "Antígua e Barbuda - Saint John\'s",
+            "Bahamas - Nassau",
+            "Barbados - Bridgetown",
+            "Belize - Belmopan",
+            "Costa Rica - São José",
+            "Cuba - Havana",
+            "Dominica - Roseau",
+            "El Salvador - São Salvador",
+            "Granada - Saint George\'s",
+            "Guatemala - Cidade da Guatemala",
+            "Haiti - Porto Príncipe",
+            "Honduras - Tegucigalpa",
+            "Jamaica - Kingston",
+            "Nicarágua - Manágua",
+            "Panamá - Cidade de Panamá",
+            "República Dominicana - São Domingos",
+            "Santa Lúcia - Castries",
+            "São Cristóvão e Nevis - Basseterre",
+            "São Vicente e Granadinas - Kingstown",
+            "Trinidad e Tobago - Porto de Espanha",
+            "Argentina - Buenos Aires",
+            "Bolívia - La Paz (sede do governo) e Sucre (constitucional)",
+            "Brasil - Brasília",
+            "Chile - Santiago",
+            "Colômbia - Bogotá",
+            "Equador - Quito",
+            "Guiana - Georgetown",
+            "Paraguai - Assunção",
+            "Peru - Lima",
+            "Suriname - Paramaribo",
+            "Uruguai - Montevidéo",
+            "Venezuela - Caracas",
+            "Afeganistão – Cabul",
+            "Arábia Saudita – Riad",
+            "Azerbaijão - Baku",
+            "Bangladesh – Dacca",
+            "Barein – Manama",
+            "Brunei – Bandar Seri Begawan",
+            "Butão – Timphu",
+            "Camboja – Phnom Penh",
+            "Cazaquistão – Astana",
+            "Catar – Doha",
+            "China – Pequim",
+            "Cingapura – Cidade de Cingapura",
+            "Coreia do Norte – Pyongyang",
+            "Coreia do Sul – Seul",
+            "Emirados Árabes Unidos – Abu Dhabi",
+            "Filipinas – Manila",
+            "Iêmen – Sana",
+            "Índia – Nova Délhi",
+            "Indonésia – Jacarta",
+            "Irã – Teerã",
+            "Iraque – Bagdá",
+            "Israel – Jerusalém",
+            "Japão – Tóquio",
+            "Jordânia – Amã",
+            "Kuwait – Cidade do Kuwait",
+            "Laos – Vietiane",
+            "Líbano – Beirute",
+            "Malásia – Kuala Lumpur",
+            "Maldivas – Male",
+            "Mianmar – Nay Puy Taw",
+            "Mongólia – Ulan Bator",
+            "Nepal – Katmandu",
+            "Omã – Mascate",
+            "Paquistão – Islamabad",
+            "Quirguistão – Bishkek",
+            "Rússia (parte asiática) - Moscou",
+            "Síria – Damasco",
+            "Sri Lanka – Colombo",
+            "Tailândia – Bangcoc",
+            "Tajidquistão – Muchambe",
+            "Timor Leste - Dili",
+            "Turcomenistão – Ashkhabad",
+            "Turquia (parte asiática) - Ancara",
+            "Uzbequistão – Tashkent",
+            "Vietnã – Hanói",
+            "Albânia - Tirana",
+            "Alemanha - Berlim",
+            "Andorra - Andorra la Vella",
+            "Armênia - Erevan",
+            "Áustria - Viena",
+            "Azerbaijão - Baku",
+            "Bielorrússia - Minsk",
+            "Bélgica - Bruxelas",
+            "Bósnia-Herzegovina - Sarajevo",
+            "Bulgária - Sófia",
+            "República Tcheca - Praga",
+            "Cazaquistão - Astana",
+            "Chipre - Nicósia",
+            "Croácia - Zagreb",
+            "Dinamarca - Copenhagem",
+            "Eslováquia - Bratislava",
+            "Eslovênia - Liubliana",
+            "Espanha - Madrid",
+            "Estônia - Tallinn",
+            "Finlândia - Helsinque",
+            "França - Paris",
+            "Grécia - Atenas",
+            "Geórgia - Tbilisi",
+            "Hungria - Budapeste",
+            "Irlanda - Dublin",
+            "Islândia - Reiquiavique",
+            "Itália - Roma",
+            "Letônia - Riga",
+            "Liechtenstein - Vaduz",
+            "Lituânia - Vilnius ",
+            "Luxemburgo - Luxemburgo",
+            "República da Macedônia do Norte - Skopje",
+            "Malta - Valetta",
+            "Moldávia - Chisinau",
+            "Mônaco - Monaco-Ville",
+            "Montenegro - Podgorica",
+            "Noruega - Oslo",
+            "Países Baixos - Amsterdã",
+            "Polônia - Varsóvia",
+            "Portugal - Lisboa",
+            "Reino Unido - Londres",
+            "Romênia - Bucareste",
+            "Rússia - Moscou",
+            "Turquia - Ancara",
+            "San Marino - San Marino",
+            "Sérvia - Belgrado",
+            "Suécia - Estocolmo",
+            "Suíça - Berna",
+            "Ucrânia - Kiev",
+            "Vaticano",
+            "Austrália - Camberra",
+            "Fiji - Suva",
+            "Ilhas Marshall - Majuro",
+            "Ilhas Salomão - Honiara",
+            "Kiribati - Taraua",
+            "Micronésia - Paliquir",
+            "Nauru - Yaren",
+            "Nova Zelândia - Wellington",
+            "Palau - Melequeoque",
+            "Papua Nova Guiné - Porto Moresby",
+            "Samoa - Apia",
+            "Tonga - Nucualofa",
+            "Tuvalu - Funafuti",
+            "Vanuatu - Porto Vila "});
+            this.cbxOrigem.Location = new System.Drawing.Point(122, 138);
+            this.cbxOrigem.Name = "cbxOrigem";
+            this.cbxOrigem.Size = new System.Drawing.Size(216, 22);
+            this.cbxOrigem.TabIndex = 20;
             // 
-            // comboBox2
+            // cbxDestino
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(122, 172);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(216, 22);
-            this.comboBox2.TabIndex = 21;
+            this.cbxDestino.FormattingEnabled = true;
+            this.cbxDestino.Items.AddRange(new object[] {
+            "África do Sul - Pretória (executiva) / Bloemfontein (judiciária) / Cidade do Cabo" +
+                " (legislativa) ",
+            "Angola - Luanda",
+            "Argélia - Argel",
+            "Benim - Porto-Novo (constitucional) / Cotonu (sede do governo)",
+            "Botswana - Gaborone ",
+            "Burkina Faso - Ouagadougou",
+            "Burundi - Bujumbura",
+            "Cabo Verde - Praia",
+            "Camarões - Yaoundé",
+            "Chade - N\'Djamena",
+            "Comores - Moroni",
+            "Costa do Marfim - Yamoussoukro",
+            "Djibouti - Djibouti",
+            "Egito - Cairo",
+            "Eritreia - Asmara",
+            "Etiópia - Adis-Abeba",
+            "Gabão - Libreville",
+            "Gana - Acra",
+            "Guiné - Conacri",
+            "Guiné Equatorial - Malabo",
+            "Guiné-Bissau - Bissau",
+            "Gâmbia - Banjul",
+            "Lesoto - Maseru",
+            "Libéria - Monróvia",
+            "Líbia - Trípoli",
+            "Madagáscar - Antananarivo",
+            "Malawi - Lilongwe",
+            "Mali - Bamako",
+            "Marrocos - Rabat",
+            "Mauritânia - Nouakchott",
+            "Maurícia - Port Louis",
+            "Moçambique - Maputo",
+            "Namíbia - Windhoek",
+            "Nigéria - Abuja",
+            "Níger - Niamey",
+            "Quénia - Nairobi",
+            "República Centro-Africana - Bangui",
+            "República Democrática do Congo - Kinshasa",
+            "República do Congo - Brazzaville",
+            "Ruanda - Kigali",
+            "Senegal - Dakar",
+            "Serra Leoa - Freetown",
+            "Seychelles - Victoria",
+            "Somália - Mogadíscio",
+            "Suazilândia - Lobamba (real e legislativa) / Mbabane (administrativa)",
+            "Sudão - Cartum",
+            "Sudão do Sul - Juba",
+            "São Tomé e Príncipe - São Tomé",
+            "Tanzânia - Dar es Salaam (administrativa) / Dodoma (oficial)",
+            "Togo - Lomé",
+            "Tunísia - Tunis",
+            "Uganda - Kampala",
+            "Zâmbia - Lusaka",
+            "Zimbabwe - Harare",
+            "Canadá - Otawwa",
+            "Estados Unidos da América - Washington",
+            "México - Cidade do México",
+            "Antígua e Barbuda - Saint John\'s",
+            "Bahamas - Nassau",
+            "Barbados - Bridgetown",
+            "Belize - Belmopan",
+            "Costa Rica - São José",
+            "Cuba - Havana",
+            "Dominica - Roseau",
+            "El Salvador - São Salvador",
+            "Granada - Saint George\'s",
+            "Guatemala - Cidade da Guatemala",
+            "Haiti - Porto Príncipe",
+            "Honduras - Tegucigalpa",
+            "Jamaica - Kingston",
+            "Nicarágua - Manágua",
+            "Panamá - Cidade de Panamá",
+            "República Dominicana - São Domingos",
+            "Santa Lúcia - Castries",
+            "São Cristóvão e Nevis - Basseterre",
+            "São Vicente e Granadinas - Kingstown",
+            "Trinidad e Tobago - Porto de Espanha",
+            "Argentina - Buenos Aires",
+            "Bolívia - La Paz (sede do governo) e Sucre (constitucional)",
+            "Brasil - Brasília",
+            "Chile - Santiago",
+            "Colômbia - Bogotá",
+            "Equador - Quito",
+            "Guiana - Georgetown",
+            "Paraguai - Assunção",
+            "Peru - Lima",
+            "Suriname - Paramaribo",
+            "Uruguai - Montevidéo",
+            "Venezuela - Caracas",
+            "Afeganistão – Cabul",
+            "Arábia Saudita – Riad",
+            "Azerbaijão - Baku",
+            "Bangladesh – Dacca",
+            "Barein – Manama",
+            "Brunei – Bandar Seri Begawan",
+            "Butão – Timphu",
+            "Camboja – Phnom Penh",
+            "Cazaquistão – Astana",
+            "Catar – Doha",
+            "China – Pequim",
+            "Cingapura – Cidade de Cingapura",
+            "Coreia do Norte – Pyongyang",
+            "Coreia do Sul – Seul",
+            "Emirados Árabes Unidos – Abu Dhabi",
+            "Filipinas – Manila",
+            "Iêmen – Sana",
+            "Índia – Nova Délhi",
+            "Indonésia – Jacarta",
+            "Irã – Teerã",
+            "Iraque – Bagdá",
+            "Israel – Jerusalém",
+            "Japão – Tóquio",
+            "Jordânia – Amã",
+            "Kuwait – Cidade do Kuwait",
+            "Laos – Vietiane",
+            "Líbano – Beirute",
+            "Malásia – Kuala Lumpur",
+            "Maldivas – Male",
+            "Mianmar – Nay Puy Taw",
+            "Mongólia – Ulan Bator",
+            "Nepal – Katmandu",
+            "Omã – Mascate",
+            "Paquistão – Islamabad",
+            "Quirguistão – Bishkek",
+            "Rússia (parte asiática) - Moscou",
+            "Síria – Damasco",
+            "Sri Lanka – Colombo",
+            "Tailândia – Bangcoc",
+            "Tajidquistão – Muchambe",
+            "Timor Leste - Dili",
+            "Turcomenistão – Ashkhabad",
+            "Turquia (parte asiática) - Ancara",
+            "Uzbequistão – Tashkent",
+            "Vietnã – Hanói",
+            "Albânia - Tirana",
+            "Alemanha - Berlim",
+            "Andorra - Andorra la Vella",
+            "Armênia - Erevan",
+            "Áustria - Viena",
+            "Azerbaijão - Baku",
+            "Bielorrússia - Minsk",
+            "Bélgica - Bruxelas",
+            "Bósnia-Herzegovina - Sarajevo",
+            "Bulgária - Sófia",
+            "República Tcheca - Praga",
+            "Cazaquistão - Astana",
+            "Chipre - Nicósia",
+            "Croácia - Zagreb",
+            "Dinamarca - Copenhagem",
+            "Eslováquia - Bratislava",
+            "Eslovênia - Liubliana",
+            "Espanha - Madrid",
+            "Estônia - Tallinn",
+            "Finlândia - Helsinque",
+            "França - Paris",
+            "Grécia - Atenas",
+            "Geórgia - Tbilisi",
+            "Hungria - Budapeste",
+            "Irlanda - Dublin",
+            "Islândia - Reiquiavique",
+            "Itália - Roma",
+            "Letônia - Riga",
+            "Liechtenstein - Vaduz",
+            "Lituânia - Vilnius ",
+            "Luxemburgo - Luxemburgo",
+            "República da Macedônia do Norte - Skopje",
+            "Malta - Valetta",
+            "Moldávia - Chisinau",
+            "Mônaco - Monaco-Ville",
+            "Montenegro - Podgorica",
+            "Noruega - Oslo",
+            "Países Baixos - Amsterdã",
+            "Polônia - Varsóvia",
+            "Portugal - Lisboa",
+            "Reino Unido - Londres",
+            "Romênia - Bucareste",
+            "Rússia - Moscou",
+            "Turquia - Ancara",
+            "San Marino - San Marino",
+            "Sérvia - Belgrado",
+            "Suécia - Estocolmo",
+            "Suíça - Berna",
+            "Ucrânia - Kiev",
+            "Vaticano",
+            "Austrália - Camberra",
+            "Fiji - Suva",
+            "Ilhas Marshall - Majuro",
+            "Ilhas Salomão - Honiara",
+            "Kiribati - Taraua",
+            "Micronésia - Paliquir",
+            "Nauru - Yaren",
+            "Nova Zelândia - Wellington",
+            "Palau - Melequeoque",
+            "Papua Nova Guiné - Porto Moresby",
+            "Samoa - Apia",
+            "Tonga - Nucualofa",
+            "Tuvalu - Funafuti",
+            "Vanuatu - Porto Vila "});
+            this.cbxDestino.Location = new System.Drawing.Point(122, 172);
+            this.cbxDestino.Name = "cbxDestino";
+            this.cbxDestino.Size = new System.Drawing.Size(216, 22);
+            this.cbxDestino.TabIndex = 21;
+            // 
+            // ofdImg
+            // 
+            this.ofdImg.FileName = "ofdImg";
             // 
             // CadastrarPac
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(624, 441);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbxDestino);
+            this.Controls.Add(this.cbxOrigem);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.pbxImg);
@@ -249,7 +668,8 @@ namespace viagemProjeto.View.Cadastrar
         private System.Windows.Forms.PictureBox pbxImg;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbxOrigem;
+        private System.Windows.Forms.ComboBox cbxDestino;
+        private System.Windows.Forms.OpenFileDialog ofdImg;
     }
 }
