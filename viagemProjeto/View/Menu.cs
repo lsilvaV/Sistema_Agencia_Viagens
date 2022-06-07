@@ -25,19 +25,19 @@ namespace viagemProjeto.View
 
         private void btnCadastrarCli_Click(object sender, EventArgs e)
         {
-            View.CadastrarCliente cadastrarCli = new View.CadastrarCliente();
+            CadastrarCliente cadastrarCli = new CadastrarCliente();
             cadastrarCli.ShowDialog();
         }
 
         private void btnCadastrarFun_Click(object sender, EventArgs e)
         {
-            View.CadastrarFun cadastrarFun = new View.CadastrarFun();
+            CadastrarFun cadastrarFun = new CadastrarFun();
             cadastrarFun.ShowDialog();
         }
 
         private void btnCadastrarPac_Click(object sender, EventArgs e)
         {
-            Cadastrar.CadastrarPac cadastrarPac = new Cadastrar.CadastrarPac();
+            CadastrarPac cadastrarPac = new CadastrarPac();
             cadastrarPac.ShowDialog();
         }
     }

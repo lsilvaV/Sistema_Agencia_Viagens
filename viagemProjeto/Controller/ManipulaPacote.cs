@@ -1,4 +1,5 @@
-﻿using System.Data.SqlClient;
+﻿using System;
+using System.Data.SqlClient;
 using System.Data;
 using viagemProjeto.Model;
 using System.Windows.Forms;
@@ -44,9 +45,9 @@ namespace viagemProjeto.Controller
                 }
             }
 
-            catch
+            catch (Exception e)
             {
-
+                MessageBox.Show(e.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
