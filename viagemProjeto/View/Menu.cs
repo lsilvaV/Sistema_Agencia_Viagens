@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using viagemProjeto.View.Cadastrar;
+using viagemProjeto.View.Pesquisar;
 
 namespace viagemProjeto.View
 {
@@ -39,6 +40,13 @@ namespace viagemProjeto.View
         {
             CadastrarPac cadastrarPac = new CadastrarPac();
             cadastrarPac.ShowDialog();
+        }
+
+        private void btnPesquisarCli_Click(object sender, EventArgs e)
+        {
+            PesquisarCliente pesquisarCliente = new PesquisarCliente();
+            pesquisarCliente.ShowDialog();
+
         }
     }
 }

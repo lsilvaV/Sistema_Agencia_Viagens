@@ -73,15 +73,16 @@ namespace viagemProjeto.View
             // btnCadastrarCli
             // 
             this.btnCadastrarCli.Name = "btnCadastrarCli";
-            this.btnCadastrarCli.Size = new System.Drawing.Size(137, 22);
+            this.btnCadastrarCli.Size = new System.Drawing.Size(180, 22);
             this.btnCadastrarCli.Text = "Cadastrar";
             this.btnCadastrarCli.Click += new System.EventHandler(this.btnCadastrarCli_Click);
             // 
             // btnPesquisarCli
             // 
             this.btnPesquisarCli.Name = "btnPesquisarCli";
-            this.btnPesquisarCli.Size = new System.Drawing.Size(137, 22);
+            this.btnPesquisarCli.Size = new System.Drawing.Size(180, 22);
             this.btnPesquisarCli.Text = "Pesquisar";
+            this.btnPesquisarCli.Click += new System.EventHandler(this.btnPesquisarCli_Click);
             // 
             // btnFun
             // 
