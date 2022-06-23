@@ -73,14 +73,14 @@ namespace viagemProjeto.View
             // btnCadastrarCli
             // 
             this.btnCadastrarCli.Name = "btnCadastrarCli";
-            this.btnCadastrarCli.Size = new System.Drawing.Size(180, 22);
+            this.btnCadastrarCli.Size = new System.Drawing.Size(137, 22);
             this.btnCadastrarCli.Text = "Cadastrar";
             this.btnCadastrarCli.Click += new System.EventHandler(this.btnCadastrarCli_Click);
             // 
             // btnPesquisarCli
             // 
             this.btnPesquisarCli.Name = "btnPesquisarCli";
-            this.btnPesquisarCli.Size = new System.Drawing.Size(180, 22);
+            this.btnPesquisarCli.Size = new System.Drawing.Size(137, 22);
             this.btnPesquisarCli.Text = "Pesquisar";
             this.btnPesquisarCli.Click += new System.EventHandler(this.btnPesquisarCli_Click);
             // 
@@ -96,15 +96,16 @@ namespace viagemProjeto.View
             // btnCadastrarFun
             // 
             this.btnCadastrarFun.Name = "btnCadastrarFun";
-            this.btnCadastrarFun.Size = new System.Drawing.Size(137, 22);
+            this.btnCadastrarFun.Size = new System.Drawing.Size(180, 22);
             this.btnCadastrarFun.Text = "Cadastrar";
             this.btnCadastrarFun.Click += new System.EventHandler(this.btnCadastrarFun_Click);
             // 
             // btnPesquisarFun
             // 
             this.btnPesquisarFun.Name = "btnPesquisarFun";
-            this.btnPesquisarFun.Size = new System.Drawing.Size(137, 22);
+            this.btnPesquisarFun.Size = new System.Drawing.Size(180, 22);
             this.btnPesquisarFun.Text = "Pesquisar";
+            this.btnPesquisarFun.Click += new System.EventHandler(this.btnPesquisarFun_Click);
             // 
             // btnPac
             // 
@@ -118,15 +119,16 @@ namespace viagemProjeto.View
             // btnCadastrarPac
             // 
             this.btnCadastrarPac.Name = "btnCadastrarPac";
-            this.btnCadastrarPac.Size = new System.Drawing.Size(137, 22);
+            this.btnCadastrarPac.Size = new System.Drawing.Size(180, 22);
             this.btnCadastrarPac.Text = "Cadastrar";
             this.btnCadastrarPac.Click += new System.EventHandler(this.btnCadastrarPac_Click);
             // 
             // btnPesquisarPac
             // 
             this.btnPesquisarPac.Name = "btnPesquisarPac";
-            this.btnPesquisarPac.Size = new System.Drawing.Size(137, 22);
+            this.btnPesquisarPac.Size = new System.Drawing.Size(180, 22);
             this.btnPesquisarPac.Text = "Pesquisar";
+            this.btnPesquisarPac.Click += new System.EventHandler(this.btnPesquisarPac_Click);
             // 
             // btnVen
             // 

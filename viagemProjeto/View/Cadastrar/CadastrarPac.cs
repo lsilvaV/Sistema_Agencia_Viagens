@@ -39,7 +39,7 @@ namespace viagemProjeto.View.Cadastrar
             {
                 Pacote.ValorPac = Convert.ToDecimal(tbxValor.Text);
                 Pacote.OrigemPac = cbxOrigem.Text;
-                Pacote.DestinoPac = cbxOrigem.Text;
+                Pacote.DestinoPac = cbxDestino.Text;
                 Pacote.DataPacIda = dtpDataIda.Value;
                 Pacote.DataPacVolta = dtpDataVolta.Value;
                 Pacote.DescPac = rtbDesc.Text;

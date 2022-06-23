@@ -48,5 +48,17 @@ namespace viagemProjeto.View
             pesquisarCliente.ShowDialog();
 
         }
+
+        private void btnPesquisarFun_Click(object sender, EventArgs e)
+        {
+            PesquisarFun pesquisarFun = new PesquisarFun();
+            pesquisarFun.ShowDialog();
+        }
+
+        private void btnPesquisarPac_Click(object sender, EventArgs e)
+        {
+            PesquisarPac pesquisarPac = new PesquisarPac();
+            pesquisarPac.ShowDialog();
+        }
     }
 }

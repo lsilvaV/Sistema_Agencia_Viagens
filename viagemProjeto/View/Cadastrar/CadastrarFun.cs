@@ -25,7 +25,7 @@ namespace viagemProjeto.View
             else
             {
                 Funcionario.NomeFun = tbxNome.Text;
-                Funcionario.EmailFun = tbxNome.Text;
+                Funcionario.EmailFun = tbxEmail.Text;
                 Funcionario.SenhaFun = tbxSenha.Text;
 
                 ManipulaFuncionario manipulaFuncionario = new ManipulaFuncionario();

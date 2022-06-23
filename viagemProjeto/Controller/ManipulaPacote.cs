@@ -69,7 +69,7 @@ namespace viagemProjeto.Controller
                     Pacote.CodPac = Convert.ToInt32(arrayDados["codPac"]);
                     Pacote.ValorPac = Convert.ToInt32(arrayDados["valorPac"]);
                     Pacote.OrigemPac = arrayDados["origemPac"].ToString();
-                    Pacote.DestinoPac = arrayDados["desinoPac"].ToString();
+                    Pacote.DestinoPac = arrayDados["destinoPac"].ToString();
                     Pacote.DataPacIda = Convert.ToDateTime(arrayDados["dataPacIda"]);
                     Pacote.DataPacVolta = Convert.ToDateTime(arrayDados["dataPacVolta"]);
                     Pacote.DescPac = arrayDados["descPac"].ToString();

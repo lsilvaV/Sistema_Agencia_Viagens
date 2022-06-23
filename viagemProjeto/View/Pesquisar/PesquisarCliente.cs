@@ -61,5 +61,10 @@ namespace viagemProjeto.View.Pesquisar
                 return;
             }
         }
+
+        private void lblTitulo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
