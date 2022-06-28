@@ -27,8 +27,8 @@ namespace viagemProjeto.Controller
                 cn.Open();
                 cmd.ExecuteNonQuery();
 
-                var resposta = MessageBox.Show("Cadastro de cliente efetuado com sucesso. Deseja efetuar outro cadastro?", 
-                    "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                var resposta = MessageBox.Show("Cadastro de cliente efetuado com sucesso. Deseja efetuar outro cadastro?",
+                    "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
                 if (resposta == DialogResult.Yes)
                 {
@@ -95,7 +95,7 @@ namespace viagemProjeto.Controller
                 cmd.Parameters.AddWithValue("@codCli", Cliente.CodCli);
                 cn.Open();
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Cliente excluido com sucesso", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Cliente excluido com sucesso", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
             catch (Exception e)
@@ -127,7 +127,7 @@ namespace viagemProjeto.Controller
                 cmd.Parameters.AddWithValue("@imgCli", Cliente.ImgCli);
                 cn.Open();
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Cliente alterado com sucesso", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Cliente alterado com sucesso", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
             catch (Exception e)

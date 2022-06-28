@@ -60,6 +60,72 @@ namespace viagemProjeto.View.Pesquisar
                 return;
             }
         }
+
+        private void btnAlterarFun_Click(object sender, EventArgs e)
+        {
+            if (tbxCod.Text == "")
+            {
+                MessageBox.Show("Digite um código de funcionário", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                tbxCod.Text = string.Empty;
+                tbxCod.Focus();
+                tbxCod.SelectAll();
+                tbxNomeFun.Text = string.Empty;
+                tbxEmailFun.Text = string.Empty;
+                tbxSenhaFun.Text = string.Empty;
+            }
+            else
+            {
+                var resposta = MessageBox.Show("Deseja alterar os dados do funcionário?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (resposta == DialogResult.Yes)
+                {
+                    Funcionario.CodFun = Convert.ToInt32(tbxCod.Text);
+                    Funcionario.NomeFun = tbxNomeFun.Text;
+                    Funcionario.EmailFun = tbxEmailFun.Text;
+                    Funcionario.SenhaFun = tbxSenhaFun.Text;
+
+                    ManipulaFuncionario manipulaFuncionario = new ManipulaFuncionario();
+                    manipulaFuncionario.alterarFun();
+                }
+
+                return;
+            }
+        }
+
+        private void btnDeletarFun_Click(object sender, EventArgs e)
+        {
+            if (tbxCod.Text == "")
+            {
+                MessageBox.Show("Digite um código de funcionário", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                tbxCod.Text = string.Empty;
+                tbxCod.Focus();
+                tbxCod.SelectAll();
+                tbxNomeFun.Text = string.Empty;
+                tbxEmailFun.Text = string.Empty;
+                tbxSenhaFun.Text = string.Empty;
+            }
+            else
+            {
+                var resposta = MessageBox.Show("Deseja deletar os dados do funcionário?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (resposta == DialogResult.Yes)
+                {
+                    Funcionario.CodFun = Convert.ToInt32(tbxCod.Text);
+
+                    ManipulaFuncionario manipulaFuncionario = new ManipulaFuncionario();
+                    manipulaFuncionario.deletarFun();
+                }
+
+                tbxCod.Text = string.Empty;
+                tbxCod.Focus();
+                tbxCod.SelectAll();
+                tbxNomeFun.Text = string.Empty;
+                tbxEmailFun.Text = string.Empty;
+                tbxSenhaFun.Text = string.Empty;
+
+                return;
+            }
+        }
     }
 }
 

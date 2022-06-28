@@ -27,7 +27,7 @@ namespace viagemProjeto.Controller
                 cmd.ExecuteNonQuery();
 
                 var resposta = MessageBox.Show("Cadastro do funcionário efetuado com sucesso. Deseja efetuar outro cadastro?",
-                    "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                    "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
                 if (resposta == DialogResult.Yes)
                 {
@@ -92,7 +92,7 @@ namespace viagemProjeto.Controller
                 cmd.Parameters.AddWithValue("@codFun", Funcionario.CodFun);
                 cn.Open();
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Funcionário excluido com sucesso", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Funcionário excluido com sucesso", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
             catch (Exception e)
@@ -123,7 +123,7 @@ namespace viagemProjeto.Controller
                 cmd.Parameters.AddWithValue("@senhaFun", Funcionario.SenhaFun);
                 cn.Open();
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Funcionário alterado com sucesso", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Funcionário alterado com sucesso", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
             catch (Exception e)

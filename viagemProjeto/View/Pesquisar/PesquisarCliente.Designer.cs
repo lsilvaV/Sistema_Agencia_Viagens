@@ -34,6 +34,9 @@ namespace viagemProjeto.View.Pesquisar
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnDeletarCli = new System.Windows.Forms.Button();
             this.btnAlterarCli = new System.Windows.Forms.Button();
+            this.lblBuscarCli = new System.Windows.Forms.Label();
+            this.btnBuscarImg = new System.Windows.Forms.Button();
+            this.pbxImg = new System.Windows.Forms.PictureBox();
             this.tbxSenhaCli = new System.Windows.Forms.TextBox();
             this.tbxEmailCli = new System.Windows.Forms.TextBox();
             this.tbxNomeCli = new System.Windows.Forms.TextBox();
@@ -45,32 +48,30 @@ namespace viagemProjeto.View.Pesquisar
             this.lblCod = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dgvCliente = new System.Windows.Forms.DataGridView();
+            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.foto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnBuscarNome = new System.Windows.Forms.Button();
             this.tbxNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
-            this.foto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pbxImg = new System.Windows.Forms.PictureBox();
-            this.btnBuscarImg = new System.Windows.Forms.Button();
-            this.lblBuscarCli = new System.Windows.Forms.Label();
+            this.ofdImg = new System.Windows.Forms.OpenFileDialog();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxImg)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxImg)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblTitulo.Location = new System.Drawing.Point(158, 29);
+            this.lblTitulo.Location = new System.Drawing.Point(182, 26);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(324, 29);
+            this.lblTitulo.Size = new System.Drawing.Size(260, 29);
             this.lblTitulo.TabIndex = 0;
-            this.lblTitulo.Text = "Pesquisar Funcionários";
+            this.lblTitulo.Text = "Pesquisar Clientes";
             // 
             // tabControl1
             // 
@@ -114,6 +115,7 @@ namespace viagemProjeto.View.Pesquisar
             this.btnDeletarCli.TabIndex = 23;
             this.btnDeletarCli.Text = "Deletar";
             this.btnDeletarCli.UseVisualStyleBackColor = true;
+            this.btnDeletarCli.Click += new System.EventHandler(this.btnDeletarCli_Click);
             // 
             // btnAlterarCli
             // 
@@ -123,6 +125,38 @@ namespace viagemProjeto.View.Pesquisar
             this.btnAlterarCli.TabIndex = 22;
             this.btnAlterarCli.Text = "Alterar";
             this.btnAlterarCli.UseVisualStyleBackColor = true;
+            this.btnAlterarCli.Click += new System.EventHandler(this.btnAlterarCli_Click);
+            // 
+            // lblBuscarCli
+            // 
+            this.lblBuscarCli.BackColor = System.Drawing.Color.Transparent;
+            this.lblBuscarCli.Location = new System.Drawing.Point(451, 61);
+            this.lblBuscarCli.Name = "lblBuscarCli";
+            this.lblBuscarCli.Size = new System.Drawing.Size(75, 14);
+            this.lblBuscarCli.TabIndex = 21;
+            this.lblBuscarCli.Text = "Imagem:";
+            this.lblBuscarCli.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // btnBuscarImg
+            // 
+            this.btnBuscarImg.Location = new System.Drawing.Point(451, 164);
+            this.btnBuscarImg.Name = "btnBuscarImg";
+            this.btnBuscarImg.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscarImg.TabIndex = 19;
+            this.btnBuscarImg.Text = "Buscar";
+            this.btnBuscarImg.UseVisualStyleBackColor = true;
+            this.btnBuscarImg.Click += new System.EventHandler(this.btnBuscarImg_Click);
+            // 
+            // pbxImg
+            // 
+            this.pbxImg.BackColor = System.Drawing.Color.Transparent;
+            this.pbxImg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbxImg.Location = new System.Drawing.Point(451, 78);
+            this.pbxImg.Name = "pbxImg";
+            this.pbxImg.Size = new System.Drawing.Size(75, 75);
+            this.pbxImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxImg.TabIndex = 18;
+            this.pbxImg.TabStop = false;
             // 
             // tbxSenhaCli
             // 
@@ -231,6 +265,26 @@ namespace viagemProjeto.View.Pesquisar
             this.dgvCliente.Size = new System.Drawing.Size(592, 200);
             this.dgvCliente.TabIndex = 5;
             // 
+            // codigo
+            // 
+            this.codigo.HeaderText = "Código";
+            this.codigo.Name = "codigo";
+            // 
+            // nome
+            // 
+            this.nome.HeaderText = "Nome";
+            this.nome.Name = "nome";
+            // 
+            // email
+            // 
+            this.email.HeaderText = "Email";
+            this.email.Name = "email";
+            // 
+            // foto
+            // 
+            this.foto.HeaderText = "Foto";
+            this.foto.Name = "foto";
+            // 
             // btnBuscarNome
             // 
             this.btnBuscarNome.Location = new System.Drawing.Point(490, 20);
@@ -256,55 +310,9 @@ namespace viagemProjeto.View.Pesquisar
             this.lblNome.TabIndex = 2;
             this.lblNome.Text = "Digite o Nome:";
             // 
-            // foto
+            // ofdImg
             // 
-            this.foto.HeaderText = "Foto";
-            this.foto.Name = "foto";
-            // 
-            // email
-            // 
-            this.email.HeaderText = "Email";
-            this.email.Name = "email";
-            // 
-            // nome
-            // 
-            this.nome.HeaderText = "Nome";
-            this.nome.Name = "nome";
-            // 
-            // codigo
-            // 
-            this.codigo.HeaderText = "Código";
-            this.codigo.Name = "codigo";
-            // 
-            // pbxImg
-            // 
-            this.pbxImg.BackColor = System.Drawing.Color.Transparent;
-            this.pbxImg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbxImg.Location = new System.Drawing.Point(451, 78);
-            this.pbxImg.Name = "pbxImg";
-            this.pbxImg.Size = new System.Drawing.Size(75, 75);
-            this.pbxImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbxImg.TabIndex = 18;
-            this.pbxImg.TabStop = false;
-            // 
-            // btnBuscarImg
-            // 
-            this.btnBuscarImg.Location = new System.Drawing.Point(451, 164);
-            this.btnBuscarImg.Name = "btnBuscarImg";
-            this.btnBuscarImg.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscarImg.TabIndex = 19;
-            this.btnBuscarImg.Text = "Buscar";
-            this.btnBuscarImg.UseVisualStyleBackColor = true;
-            // 
-            // lblBuscarCli
-            // 
-            this.lblBuscarCli.BackColor = System.Drawing.Color.Transparent;
-            this.lblBuscarCli.Location = new System.Drawing.Point(451, 61);
-            this.lblBuscarCli.Name = "lblBuscarCli";
-            this.lblBuscarCli.Size = new System.Drawing.Size(75, 14);
-            this.lblBuscarCli.TabIndex = 21;
-            this.lblBuscarCli.Text = "Imagem:";
-            this.lblBuscarCli.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ofdImg.FileName = "ofdImg";
             // 
             // PesquisarCliente
             // 
@@ -323,10 +331,10 @@ namespace viagemProjeto.View.Pesquisar
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxImg)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxImg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -360,5 +368,6 @@ namespace viagemProjeto.View.Pesquisar
         private System.Windows.Forms.DataGridViewTextBoxColumn nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
         private System.Windows.Forms.DataGridViewTextBoxColumn foto;
+        private System.Windows.Forms.OpenFileDialog ofdImg;
     }
 }

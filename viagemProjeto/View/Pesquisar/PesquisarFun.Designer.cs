@@ -31,6 +31,9 @@ namespace viagemProjeto.View.Pesquisar
         {
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dgvCliente = new System.Windows.Forms.DataGridView();
+            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnBuscarNome = new System.Windows.Forms.Button();
             this.tbxNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
@@ -48,9 +51,6 @@ namespace viagemProjeto.View.Pesquisar
             this.lblCod = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
             this.tabPage1.SuspendLayout();
@@ -86,6 +86,21 @@ namespace viagemProjeto.View.Pesquisar
             this.dgvCliente.Size = new System.Drawing.Size(592, 200);
             this.dgvCliente.TabIndex = 5;
             // 
+            // codigo
+            // 
+            this.codigo.HeaderText = "Código";
+            this.codigo.Name = "codigo";
+            // 
+            // nome
+            // 
+            this.nome.HeaderText = "Nome";
+            this.nome.Name = "nome";
+            // 
+            // email
+            // 
+            this.email.HeaderText = "Email";
+            this.email.Name = "email";
+            // 
             // btnBuscarNome
             // 
             this.btnBuscarNome.Location = new System.Drawing.Point(490, 20);
@@ -119,6 +134,7 @@ namespace viagemProjeto.View.Pesquisar
             this.btnDeletarFun.TabIndex = 23;
             this.btnDeletarFun.Text = "Deletar";
             this.btnDeletarFun.UseVisualStyleBackColor = true;
+            this.btnDeletarFun.Click += new System.EventHandler(this.btnDeletarFun_Click);
             // 
             // btnAlterarFun
             // 
@@ -128,6 +144,7 @@ namespace viagemProjeto.View.Pesquisar
             this.btnAlterarFun.TabIndex = 22;
             this.btnAlterarFun.Text = "Alterar";
             this.btnAlterarFun.UseVisualStyleBackColor = true;
+            this.btnAlterarFun.Click += new System.EventHandler(this.btnAlterarFun_Click);
             // 
             // tbxSenhaFun
             // 
@@ -246,21 +263,6 @@ namespace viagemProjeto.View.Pesquisar
             this.lblTitulo.Size = new System.Drawing.Size(324, 29);
             this.lblTitulo.TabIndex = 2;
             this.lblTitulo.Text = "Pesquisar Funcionários";
-            // 
-            // codigo
-            // 
-            this.codigo.HeaderText = "Código";
-            this.codigo.Name = "codigo";
-            // 
-            // nome
-            // 
-            this.nome.HeaderText = "Nome";
-            this.nome.Name = "nome";
-            // 
-            // email
-            // 
-            this.email.HeaderText = "Email";
-            this.email.Name = "email";
             // 
             // PesquisarFun
             // 

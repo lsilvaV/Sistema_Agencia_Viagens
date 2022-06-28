@@ -31,7 +31,7 @@ namespace viagemProjeto.Controller
                 cmd.ExecuteNonQuery();
 
                 var resposta = MessageBox.Show("Cadastro de pacote efetuado com sucesso. Deseja efetuar outro cadastro?",
-                    "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                    "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
                 if (resposta == DialogResult.Yes)
                 {
@@ -101,7 +101,7 @@ namespace viagemProjeto.Controller
                 cmd.Parameters.AddWithValue("@codPac", Pacote.CodPac);
                 cn.Open();
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Pacote excluido com sucesso", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Pacote excluido com sucesso", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
             catch (Exception e)
@@ -124,8 +124,8 @@ namespace viagemProjeto.Controller
             SqlCommand cmd = new SqlCommand("pAlterarPac", cn);
             cmd.CommandType = CommandType.StoredProcedure;
 
-            try
-            {
+            try { 
+                cmd.Parameters.AddWithValue("@codPac", Pacote.CodPac);
                 cmd.Parameters.AddWithValue("@valorPac", Pacote.ValorPac);
                 cmd.Parameters.AddWithValue("@origemPac", Pacote.OrigemPac);
                 cmd.Parameters.AddWithValue("@destinoPac", Pacote.DestinoPac);
@@ -135,7 +135,7 @@ namespace viagemProjeto.Controller
                 cmd.Parameters.AddWithValue("@imgPac", Pacote.ImgPac);
                 cn.Open();
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Pacote alterado com sucesso", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Pacote alterado com sucesso", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information) ;
             }
 
             catch (Exception e)
