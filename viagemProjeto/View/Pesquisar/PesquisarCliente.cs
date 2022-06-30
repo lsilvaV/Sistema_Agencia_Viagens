@@ -138,5 +138,28 @@ namespace viagemProjeto.View.Pesquisar
                 pbxImg.Image = Image.FromFile(ofdImg.FileName);
             }
         }
+
+        private void btnBuscarNome_Click(object sender, EventArgs e)
+        {
+            if (tbxNome.Text == "")
+            {
+                MessageBox.Show("Digite o nome do cliente.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
+
+            Cliente.NomeCli = tbxNome.Text;
+            dgvCliente.DataSource = ManipulaCliente.pesquisaNomeCli();
+
+
+            dgvCliente.Columns[0].Visible = false;
+            dgvCliente.Columns[1].Visible = false;
+            dgvCliente.Columns[2].Visible = false;
+            dgvCliente.Columns[3].Visible = false;
+            dgvCliente.Columns[4].HeaderCell.Value = "Código";
+            dgvCliente.Columns[5].HeaderCell.Value = "Nome";
+            dgvCliente.Columns[6].HeaderCell.Value = "E-mail";
+            dgvCliente.Columns[7].Visible = false;
+            dgvCliente.Columns[8].Visible = false;
+        }
     }
 }

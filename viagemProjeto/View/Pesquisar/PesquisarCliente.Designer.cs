@@ -293,6 +293,7 @@ namespace viagemProjeto.View.Pesquisar
             this.btnBuscarNome.TabIndex = 4;
             this.btnBuscarNome.Text = "Buscar";
             this.btnBuscarNome.UseVisualStyleBackColor = true;
+            this.btnBuscarNome.Click += new System.EventHandler(this.btnBuscarNome_Click);
             // 
             // tbxNome
             // 

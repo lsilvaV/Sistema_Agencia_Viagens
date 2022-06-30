@@ -42,11 +42,6 @@ namespace viagemProjeto.View.Pesquisar
                 Funcionario.CodFun = Convert.ToInt32(tbxCod.Text);
                 ManipulaFuncionario manipulaFuncionario = new ManipulaFuncionario();
                 manipulaFuncionario.pesquisaCodFun();
-
-                tbxCod.Text = Convert.ToString(Funcionario.CodFun);
-                tbxNomeFun.Text = Funcionario.NomeFun;
-                tbxEmailFun.Text = Funcionario.EmailFun;
-                tbxSenhaFun.Text = Funcionario.SenhaFun;
             }
 
             if (Funcionario.Retorno == "Não")
@@ -58,6 +53,13 @@ namespace viagemProjeto.View.Pesquisar
                 tbxCod.Focus();
                 tbxCod.SelectAll();
                 return;
+            }
+            else
+            {
+                tbxCod.Text = Convert.ToString(Funcionario.CodFun);
+                tbxNomeFun.Text = Funcionario.NomeFun;
+                tbxEmailFun.Text = Funcionario.EmailFun;
+                tbxSenhaFun.Text = Funcionario.SenhaFun;
             }
         }
 
@@ -125,6 +127,27 @@ namespace viagemProjeto.View.Pesquisar
 
                 return;
             }
+        }
+
+        private void btnBuscarNome_Click(object sender, EventArgs e)
+        {
+            if (tbxNome.Text == "")
+            {
+                MessageBox.Show("Digite o nome do funcionário.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
+
+            Funcionario.NomeFun = tbxNome.Text;
+            dgvFun.DataSource = ManipulaFuncionario.pesquisaNomeFun();
+
+            dgvFun.Columns[0].Visible = false;
+            dgvFun.Columns[1].Visible = false;
+            dgvFun.Columns[2].Visible = false;
+            dgvFun.Columns[3].HeaderCell.Value = "Código";
+            dgvFun.Columns[4].HeaderCell.Value = "Nome";
+            dgvFun.Columns[5].HeaderCell.Value = "E-mail";
+            dgvFun.Columns[6].Visible = false;
+
         }
     }
 }

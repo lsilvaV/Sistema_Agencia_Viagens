@@ -30,7 +30,7 @@ namespace viagemProjeto.View.Pesquisar
         private void InitializeComponent()
         {
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dgvCliente = new System.Windows.Forms.DataGridView();
+            this.dgvFun = new System.Windows.Forms.DataGridView();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,14 +52,14 @@ namespace viagemProjeto.View.Pesquisar
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFun)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.dgvCliente);
+            this.tabPage2.Controls.Add(this.dgvFun);
             this.tabPage2.Controls.Add(this.btnBuscarNome);
             this.tabPage2.Controls.Add(this.tbxNome);
             this.tabPage2.Controls.Add(this.lblNome);
@@ -71,20 +71,20 @@ namespace viagemProjeto.View.Pesquisar
             this.tabPage2.Text = "Nome";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // dgvCliente
+            // dgvFun
             // 
-            this.dgvCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvFun.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvFun.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFun.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codigo,
             this.nome,
             this.email});
-            this.dgvCliente.Location = new System.Drawing.Point(0, 64);
-            this.dgvCliente.Name = "dgvCliente";
-            this.dgvCliente.RowHeadersVisible = false;
-            this.dgvCliente.RowTemplate.Height = 25;
-            this.dgvCliente.Size = new System.Drawing.Size(592, 200);
-            this.dgvCliente.TabIndex = 5;
+            this.dgvFun.Location = new System.Drawing.Point(0, 64);
+            this.dgvFun.Name = "dgvFun";
+            this.dgvFun.RowHeadersVisible = false;
+            this.dgvFun.RowTemplate.Height = 25;
+            this.dgvFun.Size = new System.Drawing.Size(592, 200);
+            this.dgvFun.TabIndex = 5;
             // 
             // codigo
             // 
@@ -109,6 +109,7 @@ namespace viagemProjeto.View.Pesquisar
             this.btnBuscarNome.TabIndex = 4;
             this.btnBuscarNome.Text = "Buscar";
             this.btnBuscarNome.UseVisualStyleBackColor = true;
+            this.btnBuscarNome.Click += new System.EventHandler(this.btnBuscarNome_Click);
             // 
             // tbxNome
             // 
@@ -281,7 +282,7 @@ namespace viagemProjeto.View.Pesquisar
             this.Load += new System.EventHandler(this.PesquisarFun_Load);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFun)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
@@ -293,7 +294,7 @@ namespace viagemProjeto.View.Pesquisar
         #endregion
 
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.DataGridView dgvCliente;
+        private System.Windows.Forms.DataGridView dgvFun;
         private System.Windows.Forms.Button btnBuscarNome;
         private System.Windows.Forms.TextBox tbxNome;
         private System.Windows.Forms.Label lblNome;

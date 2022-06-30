@@ -643,7 +643,7 @@ namespace viagemProjeto.View.Cadastrar
             this.Name = "CadastrarPac";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CadastrarPac";
+            this.Text = "Cadastrar Pacote";
             this.Load += new System.EventHandler(this.CadastrarPac_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxImg)).EndInit();
             this.ResumeLayout(false);

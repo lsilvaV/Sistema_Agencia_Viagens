@@ -170,5 +170,60 @@ namespace viagemProjeto.View.Pesquisar
                 pbxImg.Image = Image.FromFile(ofdImg.FileName);
             }
         }
+
+        private void btnBuscarOrigem_Click(object sender, EventArgs e)
+        {
+            if (tbxOrigem.Text == "")
+            {
+                MessageBox.Show("Digite a origem do pacote.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
+
+            Pacote.OrigemPac = tbxOrigem.Text;
+
+            dgvOrigem.DataSource = ManipulaPacote.pesquisaOrigemPac();
+
+            dgvOrigem.Columns[0].Visible = false;
+            dgvOrigem.Columns[1].Visible = false;
+            dgvOrigem.Columns[2].Visible = false;
+            dgvOrigem.Columns[3].Visible = false;
+            dgvOrigem.Columns[4].Visible = false;
+            dgvOrigem.Columns[5].HeaderCell.Value = "Código";
+            dgvOrigem.Columns[6].HeaderCell.Value = "Valor";
+            dgvOrigem.Columns[7].HeaderCell.Value = "Origem";
+            dgvOrigem.Columns[8].Visible = false;
+            dgvOrigem.Columns[9].HeaderCell.Value = "Data de Ida";
+            dgvOrigem.Columns[10].HeaderCell.Value = "Data de Volta";
+            dgvOrigem.Columns[11].Visible = false;
+            dgvOrigem.Columns[12].Visible = false;
+        }
+
+        private void btnBuscarDestino_Click(object sender, EventArgs e)
+        {
+            if (tbxDestino.Text == "")
+            {
+                MessageBox.Show("Digite o destino do pacote.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
+
+            Pacote.DestinoPac = tbxDestino.Text;
+
+            dgvDestino.DataSource = ManipulaPacote.pesquisaDestinoPac();
+
+            dgvDestino.Columns[0].Visible = false;
+            dgvDestino.Columns[1].Visible = false;
+            dgvDestino.Columns[2].Visible = false;
+            dgvDestino.Columns[3].Visible = false;
+            dgvDestino.Columns[4].Visible = false;
+            dgvDestino.Columns[5].HeaderCell.Value = "Código";
+            dgvDestino.Columns[6].HeaderCell.Value = "Valor";
+            dgvDestino.Columns[7].Visible = false;
+            dgvDestino.Columns[8].HeaderCell.Value = "Destino";
+            dgvDestino.Columns[9].HeaderCell.Value = "Data de Ida";
+            dgvDestino.Columns[10].HeaderCell.Value = "Data de Volta";
+            dgvDestino.Columns[11].Visible = false;
+            dgvDestino.Columns[12].Visible = false;
+
+        }
     }
 }

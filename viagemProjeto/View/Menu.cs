@@ -60,5 +60,11 @@ namespace viagemProjeto.View
             PesquisarPac pesquisarPac = new PesquisarPac();
             pesquisarPac.ShowDialog();
         }
+
+        private void btnRegistrarVen_Click(object sender, EventArgs e)
+        {
+            Registrar.RegistrarVen registrarVen = new Registrar.RegistrarVen();
+            registrarVen.ShowDialog();
+        }
     }
 }

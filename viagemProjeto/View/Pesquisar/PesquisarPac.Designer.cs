@@ -54,31 +54,33 @@ namespace viagemProjeto.View.Pesquisar
             this.lblDesc = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dgvCliente = new System.Windows.Forms.DataGridView();
-            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datavolta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnBuscarNome = new System.Windows.Forms.Button();
-            this.lblNome = new System.Windows.Forms.Label();
+            this.tbxOrigem = new System.Windows.Forms.TextBox();
+            this.dgvOrigem = new System.Windows.Forms.DataGridView();
+            this.btnBuscarOrigem = new System.Windows.Forms.Button();
+            this.lblNomePac = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.tbxDestino = new System.Windows.Forms.TextBox();
+            this.dgvDestino = new System.Windows.Forms.DataGridView();
+            this.btnBuscarDestino = new System.Windows.Forms.Button();
+            this.lblDestinoPac = new System.Windows.Forms.Label();
             this.ofdImg = new System.Windows.Forms.OpenFileDialog();
+            this.codigoOrigem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorOrigem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.origem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataIdaOrigem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataVoltaOrigem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codigoDestino = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorDestino = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.destino = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataIdaDestino = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataVoltaDestino = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImg)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrigem)).BeginInit();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDestino)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -146,7 +148,7 @@ namespace viagemProjeto.View.Pesquisar
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(365, 111);
+            this.label2.Location = new System.Drawing.Point(373, 108);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 14);
             this.label2.TabIndex = 39;
@@ -355,7 +357,7 @@ namespace viagemProjeto.View.Pesquisar
             "Tonga - Nucualofa",
             "Tuvalu - Funafuti",
             "Vanuatu - Porto Vila "});
-            this.cbxDestino.Location = new System.Drawing.Point(442, 77);
+            this.cbxDestino.Location = new System.Drawing.Point(442, 74);
             this.cbxDestino.Name = "cbxDestino";
             this.cbxDestino.Size = new System.Drawing.Size(139, 22);
             this.cbxDestino.TabIndex = 38;
@@ -617,7 +619,7 @@ namespace viagemProjeto.View.Pesquisar
             // 
             this.pbxImg.BackColor = System.Drawing.Color.Transparent;
             this.pbxImg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbxImg.Location = new System.Drawing.Point(373, 128);
+            this.pbxImg.Location = new System.Drawing.Point(373, 127);
             this.pbxImg.Name = "pbxImg";
             this.pbxImg.Size = new System.Drawing.Size(210, 119);
             this.pbxImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -628,7 +630,7 @@ namespace viagemProjeto.View.Pesquisar
             // 
             this.lblValor.AutoSize = true;
             this.lblValor.BackColor = System.Drawing.Color.Transparent;
-            this.lblValor.Location = new System.Drawing.Point(55, 43);
+            this.lblValor.Location = new System.Drawing.Point(63, 43);
             this.lblValor.Name = "lblValor";
             this.lblValor.Size = new System.Drawing.Size(43, 14);
             this.lblValor.TabIndex = 23;
@@ -646,7 +648,7 @@ namespace viagemProjeto.View.Pesquisar
             // 
             this.lblOrigem.AutoSize = true;
             this.lblOrigem.BackColor = System.Drawing.Color.Transparent;
-            this.lblOrigem.Location = new System.Drawing.Point(371, 46);
+            this.lblOrigem.Location = new System.Drawing.Point(379, 46);
             this.lblOrigem.Name = "lblOrigem";
             this.lblOrigem.Size = new System.Drawing.Size(57, 14);
             this.lblOrigem.TabIndex = 24;
@@ -664,7 +666,7 @@ namespace viagemProjeto.View.Pesquisar
             // 
             this.lblDestino.AutoSize = true;
             this.lblDestino.BackColor = System.Drawing.Color.Transparent;
-            this.lblDestino.Location = new System.Drawing.Point(368, 80);
+            this.lblDestino.Location = new System.Drawing.Point(378, 77);
             this.lblDestino.Name = "lblDestino";
             this.lblDestino.Size = new System.Drawing.Size(60, 14);
             this.lblDestino.TabIndex = 25;
@@ -682,7 +684,7 @@ namespace viagemProjeto.View.Pesquisar
             // 
             this.lblDataIda.AutoSize = true;
             this.lblDataIda.BackColor = System.Drawing.Color.Transparent;
-            this.lblDataIda.Location = new System.Drawing.Point(11, 77);
+            this.lblDataIda.Location = new System.Drawing.Point(19, 77);
             this.lblDataIda.Name = "lblDataIda";
             this.lblDataIda.Size = new System.Drawing.Size(87, 14);
             this.lblDataIda.TabIndex = 26;
@@ -699,7 +701,7 @@ namespace viagemProjeto.View.Pesquisar
             // 
             this.lblDataVolta.AutoSize = true;
             this.lblDataVolta.BackColor = System.Drawing.Color.Transparent;
-            this.lblDataVolta.Location = new System.Drawing.Point(1, 111);
+            this.lblDataVolta.Location = new System.Drawing.Point(9, 111);
             this.lblDataVolta.Name = "lblDataVolta";
             this.lblDataVolta.Size = new System.Drawing.Size(97, 14);
             this.lblDataVolta.TabIndex = 27;
@@ -709,7 +711,7 @@ namespace viagemProjeto.View.Pesquisar
             // 
             this.lblDesc.AutoSize = true;
             this.lblDesc.BackColor = System.Drawing.Color.Transparent;
-            this.lblDesc.Location = new System.Drawing.Point(26, 145);
+            this.lblDesc.Location = new System.Drawing.Point(34, 145);
             this.lblDesc.Name = "lblDesc";
             this.lblDesc.Size = new System.Drawing.Size(72, 14);
             this.lblDesc.TabIndex = 28;
@@ -728,10 +730,10 @@ namespace viagemProjeto.View.Pesquisar
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.textBox1);
-            this.tabPage2.Controls.Add(this.dgvCliente);
-            this.tabPage2.Controls.Add(this.btnBuscarNome);
-            this.tabPage2.Controls.Add(this.lblNome);
+            this.tabPage2.Controls.Add(this.tbxOrigem);
+            this.tabPage2.Controls.Add(this.dgvOrigem);
+            this.tabPage2.Controls.Add(this.btnBuscarOrigem);
+            this.tabPage2.Controls.Add(this.lblNomePac);
             this.tabPage2.Location = new System.Drawing.Point(4, 23);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -740,73 +742,55 @@ namespace viagemProjeto.View.Pesquisar
             this.tabPage2.Text = "Origem";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // tbxOrigem
             // 
-            this.textBox1.Location = new System.Drawing.Point(79, 18);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(405, 22);
-            this.textBox1.TabIndex = 10;
+            this.tbxOrigem.Location = new System.Drawing.Point(79, 18);
+            this.tbxOrigem.Name = "tbxOrigem";
+            this.tbxOrigem.Size = new System.Drawing.Size(405, 22);
+            this.tbxOrigem.TabIndex = 10;
             // 
-            // dgvCliente
+            // dgvOrigem
             // 
-            this.dgvCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.codigo,
-            this.dataida,
-            this.datavolta,
-            this.valor});
-            this.dgvCliente.Location = new System.Drawing.Point(0, 62);
-            this.dgvCliente.Name = "dgvCliente";
-            this.dgvCliente.RowHeadersVisible = false;
-            this.dgvCliente.RowTemplate.Height = 25;
-            this.dgvCliente.Size = new System.Drawing.Size(592, 200);
-            this.dgvCliente.TabIndex = 9;
+            this.dgvOrigem.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvOrigem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOrigem.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.codigoOrigem,
+            this.valorOrigem,
+            this.origem,
+            this.dataIdaOrigem,
+            this.dataVoltaOrigem});
+            this.dgvOrigem.Location = new System.Drawing.Point(0, 62);
+            this.dgvOrigem.Name = "dgvOrigem";
+            this.dgvOrigem.RowHeadersVisible = false;
+            this.dgvOrigem.RowTemplate.Height = 25;
+            this.dgvOrigem.Size = new System.Drawing.Size(592, 200);
+            this.dgvOrigem.TabIndex = 9;
             // 
-            // codigo
+            // btnBuscarOrigem
             // 
-            this.codigo.HeaderText = "Código";
-            this.codigo.Name = "codigo";
+            this.btnBuscarOrigem.Location = new System.Drawing.Point(490, 18);
+            this.btnBuscarOrigem.Name = "btnBuscarOrigem";
+            this.btnBuscarOrigem.Size = new System.Drawing.Size(96, 23);
+            this.btnBuscarOrigem.TabIndex = 8;
+            this.btnBuscarOrigem.Text = "Buscar";
+            this.btnBuscarOrigem.UseVisualStyleBackColor = true;
+            this.btnBuscarOrigem.Click += new System.EventHandler(this.btnBuscarOrigem_Click);
             // 
-            // dataida
+            // lblNomePac
             // 
-            this.dataida.HeaderText = "Data de Ida";
-            this.dataida.Name = "dataida";
-            // 
-            // datavolta
-            // 
-            this.datavolta.HeaderText = "Data de Volta";
-            this.datavolta.Name = "datavolta";
-            // 
-            // valor
-            // 
-            this.valor.HeaderText = "Valor";
-            this.valor.Name = "valor";
-            // 
-            // btnBuscarNome
-            // 
-            this.btnBuscarNome.Location = new System.Drawing.Point(490, 18);
-            this.btnBuscarNome.Name = "btnBuscarNome";
-            this.btnBuscarNome.Size = new System.Drawing.Size(96, 23);
-            this.btnBuscarNome.TabIndex = 8;
-            this.btnBuscarNome.Text = "Buscar";
-            this.btnBuscarNome.UseVisualStyleBackColor = true;
-            // 
-            // lblNome
-            // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(16, 22);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(57, 14);
-            this.lblNome.TabIndex = 7;
-            this.lblNome.Text = "Origem:";
+            this.lblNomePac.AutoSize = true;
+            this.lblNomePac.Location = new System.Drawing.Point(16, 22);
+            this.lblNomePac.Name = "lblNomePac";
+            this.lblNomePac.Size = new System.Drawing.Size(57, 14);
+            this.lblNomePac.TabIndex = 7;
+            this.lblNomePac.Text = "Origem:";
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.textBox2);
-            this.tabPage3.Controls.Add(this.dataGridView1);
-            this.tabPage3.Controls.Add(this.button1);
-            this.tabPage3.Controls.Add(this.label1);
+            this.tabPage3.Controls.Add(this.tbxDestino);
+            this.tabPage3.Controls.Add(this.dgvDestino);
+            this.tabPage3.Controls.Add(this.btnBuscarDestino);
+            this.tabPage3.Controls.Add(this.lblDestinoPac);
             this.tabPage3.Location = new System.Drawing.Point(4, 23);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -815,82 +799,116 @@ namespace viagemProjeto.View.Pesquisar
             this.tabPage3.Text = "Destino";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // tbxDestino
             // 
-            this.textBox2.Location = new System.Drawing.Point(79, 18);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(405, 22);
-            this.textBox2.TabIndex = 10;
+            this.tbxDestino.Location = new System.Drawing.Point(79, 18);
+            this.tbxDestino.Name = "tbxDestino";
+            this.tbxDestino.Size = new System.Drawing.Size(405, 22);
+            this.tbxDestino.TabIndex = 10;
             // 
-            // dataGridView1
+            // dgvDestino
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4});
-            this.dataGridView1.Location = new System.Drawing.Point(0, 62);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(592, 200);
-            this.dataGridView1.TabIndex = 9;
+            this.dgvDestino.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDestino.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDestino.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.codigoDestino,
+            this.valorDestino,
+            this.destino,
+            this.dataIdaDestino,
+            this.dataVoltaDestino});
+            this.dgvDestino.Location = new System.Drawing.Point(0, 62);
+            this.dgvDestino.Name = "dgvDestino";
+            this.dgvDestino.RowHeadersVisible = false;
+            this.dgvDestino.RowTemplate.Height = 25;
+            this.dgvDestino.Size = new System.Drawing.Size(592, 200);
+            this.dgvDestino.TabIndex = 9;
             // 
-            // dataGridViewTextBoxColumn1
+            // btnBuscarDestino
             // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Código";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.btnBuscarDestino.Location = new System.Drawing.Point(490, 18);
+            this.btnBuscarDestino.Name = "btnBuscarDestino";
+            this.btnBuscarDestino.Size = new System.Drawing.Size(96, 23);
+            this.btnBuscarDestino.TabIndex = 8;
+            this.btnBuscarDestino.Text = "Buscar";
+            this.btnBuscarDestino.UseVisualStyleBackColor = true;
+            this.btnBuscarDestino.Click += new System.EventHandler(this.btnBuscarDestino_Click);
             // 
-            // dataGridViewTextBoxColumn2
+            // lblDestinoPac
             // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Data de Ida";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Data de Volta";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Valor";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(490, 18);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 14);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Destino:";
+            this.lblDestinoPac.AutoSize = true;
+            this.lblDestinoPac.Location = new System.Drawing.Point(13, 22);
+            this.lblDestinoPac.Name = "lblDestinoPac";
+            this.lblDestinoPac.Size = new System.Drawing.Size(60, 14);
+            this.lblDestinoPac.TabIndex = 7;
+            this.lblDestinoPac.Text = "Destino:";
             // 
             // ofdImg
             // 
             this.ofdImg.FileName = "ofdImg";
+            // 
+            // codigoOrigem
+            // 
+            this.codigoOrigem.HeaderText = "Código";
+            this.codigoOrigem.Name = "codigoOrigem";
+            // 
+            // valorOrigem
+            // 
+            this.valorOrigem.HeaderText = "Valor";
+            this.valorOrigem.Name = "valorOrigem";
+            // 
+            // origem
+            // 
+            this.origem.HeaderText = "Origem";
+            this.origem.Name = "origem";
+            // 
+            // dataIdaOrigem
+            // 
+            this.dataIdaOrigem.HeaderText = "Data de Ida";
+            this.dataIdaOrigem.Name = "dataIdaOrigem";
+            // 
+            // dataVoltaOrigem
+            // 
+            this.dataVoltaOrigem.HeaderText = "Data de Volta";
+            this.dataVoltaOrigem.Name = "dataVoltaOrigem";
+            // 
+            // codigoDestino
+            // 
+            this.codigoDestino.HeaderText = "Código";
+            this.codigoDestino.Name = "codigoDestino";
+            // 
+            // valorDestino
+            // 
+            this.valorDestino.HeaderText = "Valor";
+            this.valorDestino.Name = "valorDestino";
+            // 
+            // destino
+            // 
+            this.destino.HeaderText = "Destino";
+            this.destino.Name = "destino";
+            // 
+            // dataIdaDestino
+            // 
+            this.dataIdaDestino.HeaderText = "Data de Ida";
+            this.dataIdaDestino.Name = "dataIdaDestino";
+            // 
+            // dataVoltaDestino
+            // 
+            this.dataVoltaDestino.HeaderText = "Data de Volta";
+            this.dataVoltaDestino.Name = "dataVoltaDestino";
             // 
             // PesquisarPac
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(624, 441);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.MaximizeBox = false;
             this.Name = "PesquisarPac";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pesquisar Pacote";
             this.tabPage1.ResumeLayout(false);
@@ -899,10 +917,10 @@ namespace viagemProjeto.View.Pesquisar
             this.tabControl1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrigem)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDestino)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -918,22 +936,14 @@ namespace viagemProjeto.View.Pesquisar
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridView dgvCliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataida;
-        private System.Windows.Forms.DataGridViewTextBoxColumn datavolta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn valor;
-        private System.Windows.Forms.Button btnBuscarNome;
-        private System.Windows.Forms.Label lblNome;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox tbxOrigem;
+        private System.Windows.Forms.DataGridView dgvOrigem;
+        private System.Windows.Forms.Button btnBuscarOrigem;
+        private System.Windows.Forms.Label lblNomePac;
+        private System.Windows.Forms.TextBox tbxDestino;
+        private System.Windows.Forms.DataGridView dgvDestino;
+        private System.Windows.Forms.Button btnBuscarDestino;
+        private System.Windows.Forms.Label lblDestinoPac;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbxDestino;
         private System.Windows.Forms.ComboBox cbxOrigem;
@@ -953,5 +963,15 @@ namespace viagemProjeto.View.Pesquisar
         private System.Windows.Forms.Button btnAlterarPac;
         private System.Windows.Forms.Button btnDeletarPac;
         private System.Windows.Forms.OpenFileDialog ofdImg;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigoOrigem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valorOrigem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn origem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataIdaOrigem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataVoltaOrigem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigoDestino;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valorDestino;
+        private System.Windows.Forms.DataGridViewTextBoxColumn destino;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataIdaDestino;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataVoltaDestino;
     }
 }
