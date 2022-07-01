@@ -43,6 +43,7 @@ namespace viagemProjeto.View
             this.btnVen = new System.Windows.Forms.ToolStripMenuItem();
             this.btnRegistrarVen = new System.Windows.Forms.ToolStripMenuItem();
             this.btnSair = new System.Windows.Forms.ToolStripMenuItem();
+            this.pesquisarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -133,7 +134,8 @@ namespace viagemProjeto.View
             // btnVen
             // 
             this.btnVen.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnRegistrarVen});
+            this.btnRegistrarVen,
+            this.pesquisarToolStripMenuItem});
             this.btnVen.Name = "btnVen";
             this.btnVen.Size = new System.Drawing.Size(58, 20);
             this.btnVen.Text = "&Venda";
@@ -151,6 +153,13 @@ namespace viagemProjeto.View
             this.btnSair.Size = new System.Drawing.Size(43, 20);
             this.btnSair.Text = "&Sair";
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
+            // pesquisarToolStripMenuItem
+            // 
+            this.pesquisarToolStripMenuItem.Name = "pesquisarToolStripMenuItem";
+            this.pesquisarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pesquisarToolStripMenuItem.Text = "Pesquisar";
+            this.pesquisarToolStripMenuItem.Click += new System.EventHandler(this.pesquisarToolStripMenuItem_Click);
             // 
             // Menu
             // 
@@ -189,5 +198,6 @@ namespace viagemProjeto.View
         private System.Windows.Forms.ToolStripMenuItem btnCadastrarPac;
         private System.Windows.Forms.ToolStripMenuItem btnPesquisarPac;
         private System.Windows.Forms.ToolStripMenuItem btnRegistrarVen;
+        private System.Windows.Forms.ToolStripMenuItem pesquisarToolStripMenuItem;
     }
 }

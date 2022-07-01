@@ -66,5 +66,11 @@ namespace viagemProjeto.View
             Registrar.RegistrarVen registrarVen = new Registrar.RegistrarVen();
             registrarVen.ShowDialog();
         }
+
+        private void pesquisarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PesquisarVen pesquisarVen = new PesquisarVen();
+            pesquisarVen.ShowDialog();
+        }
     }
 }

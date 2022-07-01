@@ -113,7 +113,7 @@ namespace viagemProjeto.View.Registrar
             }
             else
             {
-                Pacote.CodPac = Convert.ToInt32(tbxCodFun.Text);
+                Pacote.CodPac = Convert.ToInt32(tbxCodPac.Text);
                 ManipulaPacote manipulaPacote = new ManipulaPacote();
                 manipulaPacote.pesquisaCodPac();
             }
@@ -145,6 +145,7 @@ namespace viagemProjeto.View.Registrar
                 Venda.CodCliFK = Convert.ToInt32(tbxCodCli.Text);
                 Venda.CodFunFK = Convert.ToInt32(tbxCodFun.Text);
                 Venda.CodPacFK = Convert.ToInt32(tbxCodPac.Text);
+                Venda.PagoVen = Convert.ToInt32(tbxValorPac.Text);
 
                 ManipulaVenda manipulaVenda = new ManipulaVenda();
                 manipulaVenda.cadastrarVen();
@@ -162,3 +163,4 @@ namespace viagemProjeto.View.Registrar
         }
     }
 }
+

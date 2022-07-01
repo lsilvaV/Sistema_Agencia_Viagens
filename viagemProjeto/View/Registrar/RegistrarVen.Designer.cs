@@ -146,19 +146,19 @@ namespace viagemProjeto.View.Registrar
             // 
             // tbxValorPac
             // 
-            this.tbxValorPac.Location = new System.Drawing.Point(138, 59);
+            this.tbxValorPac.Location = new System.Drawing.Point(144, 376);
             this.tbxValorPac.Name = "tbxValorPac";
-            this.tbxValorPac.Size = new System.Drawing.Size(356, 22);
+            this.tbxValorPac.Size = new System.Drawing.Size(414, 22);
             this.tbxValorPac.TabIndex = 12;
             // 
             // lblValorPac
             // 
             this.lblValorPac.AutoSize = true;
-            this.lblValorPac.Location = new System.Drawing.Point(25, 62);
+            this.lblValorPac.Location = new System.Drawing.Point(31, 379);
             this.lblValorPac.Name = "lblValorPac";
-            this.lblValorPac.Size = new System.Drawing.Size(110, 14);
+            this.lblValorPac.Size = new System.Drawing.Size(106, 14);
             this.lblValorPac.TabIndex = 11;
-            this.lblValorPac.Text = "Valor do Pacote:";
+            this.lblValorPac.Text = "Valor da Venda:";
             // 
             // btnBuscarFun
             // 
@@ -182,7 +182,7 @@ namespace viagemProjeto.View.Registrar
             // 
             // btnBuscarPac
             // 
-            this.btnBuscarPac.Location = new System.Drawing.Point(419, 87);
+            this.btnBuscarPac.Location = new System.Drawing.Point(219, 27);
             this.btnBuscarPac.Name = "btnBuscarPac";
             this.btnBuscarPac.Size = new System.Drawing.Size(75, 23);
             this.btnBuscarPac.TabIndex = 15;
@@ -192,7 +192,7 @@ namespace viagemProjeto.View.Registrar
             // 
             // btnRegistrarVen
             // 
-            this.btnRegistrarVen.Location = new System.Drawing.Point(510, 15);
+            this.btnRegistrarVen.Location = new System.Drawing.Point(466, 406);
             this.btnRegistrarVen.Name = "btnRegistrarVen";
             this.btnRegistrarVen.Size = new System.Drawing.Size(92, 23);
             this.btnRegistrarVen.TabIndex = 16;
@@ -219,21 +219,19 @@ namespace viagemProjeto.View.Registrar
             this.groupBox2.Controls.Add(this.lblNomeFun);
             this.groupBox2.Location = new System.Drawing.Point(30, 176);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(528, 129);
+            this.groupBox2.Size = new System.Drawing.Size(528, 121);
             this.groupBox2.TabIndex = 18;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Funcionário";
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.tbxValorPac);
             this.groupBox3.Controls.Add(this.btnBuscarPac);
-            this.groupBox3.Controls.Add(this.lblValorPac);
             this.groupBox3.Controls.Add(this.lblCodPac);
             this.groupBox3.Controls.Add(this.tbxCodPac);
-            this.groupBox3.Location = new System.Drawing.Point(30, 313);
+            this.groupBox3.Location = new System.Drawing.Point(30, 303);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(528, 116);
+            this.groupBox3.Size = new System.Drawing.Size(528, 67);
             this.groupBox3.TabIndex = 14;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Pacote";
@@ -244,7 +242,9 @@ namespace viagemProjeto.View.Registrar
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(624, 441);
+            this.Controls.Add(this.tbxValorPac);
             this.Controls.Add(this.btnRegistrarVen);
+            this.Controls.Add(this.lblValorPac);
             this.Controls.Add(this.tbxNomeCli);
             this.Controls.Add(this.lblNomeCli);
             this.Controls.Add(this.lblCodCli);
